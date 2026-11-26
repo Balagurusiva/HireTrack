@@ -1,0 +1,13 @@
+name: Main guard
+on:
+  pull_request:
+    branches: [main]
+jobs:
+  only-dev:
+    name: Only dev can merge to main
+    runs-on: ubuntu-latest
+    steps:
+      - run: |
+          if [ "${{ github.head_ref }}" != "dev" ]; then
+            echo "PRs to main must come from dev"; exit 1
+          fi
