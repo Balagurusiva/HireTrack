@@ -19,3 +19,9 @@ A job application tracker: Kanban board of applications, resume–JD matcher, re
 - **Custom User model**: email-based login (no username). Defined before the first migration and referenced via `settings.AUTH_USER_MODEL` / `get_user_model()`, never `django.contrib.auth.models.User` directly.
 - **Data isolation**: every queryset must be scoped to `request.user` (e.g. override `get_queryset()` to filter by `user=self.request.user`, and set `user` in `perform_create`). Never return or modify another user's data.
 - **Tests**: write pytest tests (pytest-django) for every API endpoint, covering the happy path, auth required, and that users can't access each other's data.
+
+## Git workflow
+- Branches: main = production (deployed to AWS), dev = integration (tested locally).
+- Always branch off dev: feat/..., fix/..., chore/...
+- Feature PRs target dev. Only dev → main PRs are allowed, after local testing.
+- Conventional Commits only: type(scope): description
