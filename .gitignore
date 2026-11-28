@@ -20,6 +20,7 @@ celerybeat.pid
 *.log
 media/
 staticfiles/
+backend/venv/
 
 # Node / Next.js
 node_modules/
