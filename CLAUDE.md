@@ -4,7 +4,7 @@ A job application tracker: Kanban board of applications, resume–JD matcher, re
 
 ## Stack
 
-- **Backend** (`/backend`): Django 5, Django REST Framework, MySQL 8, SimpleJWT (auth), Celery + Redis (background jobs, reminders)
+- **Backend** (`/backend`): Django 6, Django REST Framework, PostgreSQL, SimpleJWT (auth), Celery + Redis (background jobs, reminders)
 - **Frontend** (`/frontend`): Next.js (App Router), TypeScript, Tailwind CSS, Redux Toolkit
 
 ## How to work with me
